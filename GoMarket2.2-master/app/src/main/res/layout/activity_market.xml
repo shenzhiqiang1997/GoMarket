@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_market"
+        android:layout_height="200dp"
+        android:layout_width="match_parent">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar_market"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:toolbarId="@+id/toolbar_good"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary">
+            <!--contentScrim为趋于折叠以及折叠之后的颜色
+            layout_scrollFlags="scroll|exitUntilCollapsed"
+            scroll表示会随着内容而滚动，exitUntilCollapsed表示
+            随着滚动完成折叠折后保留在界面上，不再移出屏幕
+            -->
+            <ImageView
+                android:id="@+id/market_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"/>
+            <!--scaleType 表示图片的缩放方式，按照原来的比例从中间缩放
+                parallax表示这个view会随着滚动而缩起来
+            -->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_market"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                app:layout_collapseMode="pin">
+                <!--pin 表示此view不会随着滚动而缩起来-->
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--总的壳子-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <!--超市信息的壳子-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBetween"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <!--超市名字的外壳-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBackGround"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/market_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="超市的描述"
+                        android:textColor="#030303"
+                        android:textSize="25sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/rmb_icon" />
+                </LinearLayout>
+
+
+                <!--位置及电话-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBackGround">
+
+                    <TextView
+                        android:id="@+id/market_site"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:text="超市地址"
+                        android:textColor="@color/colorGary" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@drawable/phone_background">
+
+                        <ImageButton
+                            android:id="@+id/market_phone_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/colorBackGround"
+                            android:padding="10dp"
+                            app:srcCompat="@android:drawable/sym_action_call" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/market_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp" />
+                </FrameLayout>
+
+                <!--距离定位图标-->
+                <LinearLayout
+                    android:id="@+id/market_site_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/item_background"
+                    android:orientation="horizontal">
+
+                    <ImageView
+
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/site_icon" />
+
+                    <TextView
+
+                        android:id="@+id/market_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="距离"
+                        android:textColor="@color/colorGary" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!--优惠信息的壳子-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBetween"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <!--"优惠信息的壳子"-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_background"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="优惠信息"
+                        android:textColor="@color/colorGary" />
+                </LinearLayout>
+
+                <!--信息的壳子-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_background"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="暂时没有哦"
+                        android:textColor="@color/colorGary" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--超市内商品壳子-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--"推荐商品"的壳子-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_background"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="推荐商品"
+                        android:textColor="@color/colorGary" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_view_market_good"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/colorBackGround"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="已经被你看完了呢"
+                        android:textColor="@color/colorGary" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

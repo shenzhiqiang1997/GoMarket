@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/first_swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                
+                <!--活动的外壳-->
+                <LinearLayout
+                    android:paddingBottom="10dp"
+                    android:background="@color/colorBetween"
+                    android:paddingTop="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--"优惠活动"的外壳-->
+                    <LinearLayout
+                        android:background="@drawable/item_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp">
+                        <TextView
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorGary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="- 优惠活动 -"/>
+
+                    </LinearLayout>
+                    
+                    <!--第一行活动的外壳 三个-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <!--第一个活动-->
+                        <LinearLayout
+                            android:id="@+id/huodong1"
+                            android:background="@drawable/item_background"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" 
+                                android:textColor="#000000"
+                                android:text="活动1"/>
+                            <TextView
+                                android:gravity="center"
+                                android:text="活动1"
+                                android:textColor="#FF4500"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                           <ImageView
+                               android:layout_width="50dp"
+                               android:layout_height="50dp"
+                               android:src="@drawable/huodong1"/>
+                            
+                        </LinearLayout>
+                        <!--第二个活动-->
+                        <LinearLayout
+                            android:id="@+id/huodong2"
+                            android:background="@drawable/huodong1_background"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000000"
+                                android:text="活动2"/>
+                            <TextView
+                                android:gravity="center"
+                                android:text="活动2"
+                                android:textColor="#EEC900"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/huodong2"/>
+
+                        </LinearLayout>
+                        <!--第三个活动-->
+                        <LinearLayout
+                            android:id="@+id/huodong3"
+                            android:background="@drawable/item_background"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000000"
+                                android:text="活动3"/>
+                            <TextView
+                                android:gravity="center"
+                                android:text="活动3"
+                                android:textColor="#FFA500"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/huodong3"/>
+
+                        </LinearLayout>
+                        
+                    </LinearLayout>
+                    
+                    <!--第二行活动的外壳 有四个-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <!--第四个活动-->
+                        <LinearLayout
+                            android:id="@+id/huodong4"
+                            android:background="@drawable/huodong2_background"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000000"
+                                android:text="活动4"/>
+                            <TextView
+                                android:gravity="center"
+                                android:text="活动4"
+                                android:textColor="#FF3030"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/huodong4"/>
+
+                        </LinearLayout>
+                        <!--第五个活动-->
+                        <LinearLayout
+                            android:id="@+id/huodong5"
+                            android:background="@drawable/huodong2_background"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000000"
+                                android:text="活动5"/>
+                            <TextView
+                                android:gravity="center"
+                                android:text="活动5"
+                                android:textColor="#90EE90"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/huodong5"/>
+
+                        </LinearLayout>
+                        <!--第六个活动-->
+                        <LinearLayout
+                            android:id="@+id/huodong6"
+                            android:background="@drawable/huodong2_background"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000000"
+                                android:text="活动6"/>
+                            <TextView
+                                android:gravity="center"
+                                android:text="活动6"
+                                android:textColor="#912CEE"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/huodong6"/>
+
+                        </LinearLayout>
+                        <!--第七个活动-->
+                        <LinearLayout
+                            android:id="@+id/huodong7"
+                            android:background="@color/colorBackGround"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000000"
+                                android:text="活动7"/>
+                            <TextView
+                                android:gravity="center"
+                                android:text="活动7"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/huodong7"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    
+                </LinearLayout>
+
+                <!--猜你喜欢的外壳-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:background="@color/colorBetween">
+                    <!--"猜你喜欢"的外壳-->
+                    <LinearLayout
+                        android:background="@drawable/item_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp">
+                        <TextView
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorGary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="- 猜你喜欢 -"/>
+
+                    </LinearLayout>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/first_good_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+                <!--推荐店铺的外壳-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:background="@color/colorBetween">
+                    <!--"推荐店铺"的外壳-->
+                    <LinearLayout
+                        android:background="@drawable/item_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp">
+                        <TextView
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorGary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="- 推荐店铺 -"/>
+                    </LinearLayout>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/first_market_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+                    <TextView
+                        android:textColor="@color/colorGary"
+                        android:gravity="center"
+                        android:text="再怎么找也没有了呢"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

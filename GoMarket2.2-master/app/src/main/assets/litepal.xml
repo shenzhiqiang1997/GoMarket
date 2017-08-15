@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="GoMarket" />
+
+    <version value="2" />
+
+    <list>
+        <mapping class="com.buhinia.search2.model.GoodListItem"/>
+        <mapping class="com.buhinia.search2.model.MarketListItem"/>
+        <mapping class="com.buhinia.search2.model.BrowseHistory"/>
+        <mapping class="com.buhinia.search2.model.ActivityListItem"/>
+    </list>
+
+
+</litepal>

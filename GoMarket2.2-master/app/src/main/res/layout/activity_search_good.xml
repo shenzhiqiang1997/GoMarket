@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--使toolbar与recyclerview协作，当recyclerview向上滚动的时候toolbar可以折叠起来
+        CoordinatorLayout是一个加强版的framelayout一般可以使recyclerview偏移来达到
+        不遮挡toolbar的效果，但是material design提供了一个AppBarLayout这个layout相当于一个
+        LinearLayout，它在内部做了很多的滚动事件的封装
+    -->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                app:layout_scrollFlags="scroll|enterAlways|snap">
+                <!--上面这行属性表示toolbar可以折叠
+                    scroll表示recyclerview向上滚动的时候toolbar会一起向上滚动并隐藏
+                    enteralways表示recyclerview向下滚动的时候toolbar也会向下并出现
+                    snap表示toolbar还没有完全显示或者隐藏的时候，会根据当前的距离自动
+                    选择显示还是隐藏
+                -->
+                <EditText
+                    android:id="@+id/text_search"
+                    android:hint="苹果"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:maxLines="1"/>
+            </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--用于筛选的壳子-->
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/toolbar_height">
+
+           <Button
+               android:textSize="20sp"
+               android:textColor="#000000"
+               android:id="@+id/hot"
+               android:text="热度"
+               android:background="@color/colorBetween"
+               android:layout_weight="1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+           <Button
+               android:textSize="20sp"
+               android:textColor="#000000"
+               android:id="@+id/near"
+               android:text="距离"
+               android:background="@color/colorBetween"
+               android:layout_weight="1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+           <Button
+               android:textSize="20sp"
+               android:textColor="#000000"
+               android:id="@+id/cheap"
+               android:text="价格"
+               android:background="@color/colorBetween"
+               android:layout_weight="1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+       </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--上面这个属性指定了recyclerview与appbar一起协作不会遮挡appbar-->
+    </android.support.v7.widget.RecyclerView>
+        <LinearLayout
+            android:background="@color/colorBetween"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:background="@color/colorBackGround"
+                android:gravity="center"
+                android:textColor="@color/colorGary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="全都被你看完了呢"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/item_background">
+
+    <!--存放图片的外壳-->
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:padding="8dp"
+    android:layout_height="match_parent">
+    <ImageView
+
+        android:id="@+id/list_good_pic"
+        android:layout_width="@dimen/list_pic_size"
+        android:layout_height="@dimen/list_pic_size"
+        android:src="@mipmap/ic_launcher" />
+</LinearLayout>
+
+    <!--商品信息的外壳-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <!--商品名称距离-->
+        <FrameLayout
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/list_good_text"
+                android:text="商品的描述"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:textColor="#000000"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/list_good_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="距离"
+                android:textColor="@color/colorGary"
+                android:layout_gravity="bottom|right"/>
+        </FrameLayout>
+
+
+        <!--商品的位置外壳-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp">
+            <TextView
+                android:id="@+id/list_good_site"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGary"
+                android:text="商品位置"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="¥"
+                    android:gravity="bottom|left"
+                    android:textColor="@color/colorPrimary"/>
+                <TextView
+                    android:id="@+id/list_good_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品价格"
+                    android:gravity="bottom|left"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/list_good_old_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom|left"
+                    android:paddingLeft="30dp"
+                    android:text="原价: "
+                    android:textColor="@color/colorGary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="¥"
+                    android:gravity="bottom|left"
+                    android:textColor="@color/colorGary"/>
+                <TextView
+                    android:id="@+id/list_old_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom|left"
+                    android:textColor="@color/colorGary"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_height">50dp</dimen>
+    <dimen name="nagivation_height">60dp</dimen>
+    <dimen name="list_pic_size">100dp</dimen>
+
+    <!--activity中的商品名称 超市名称大小-->
+    <dimen name="text_in_activity">35sp</dimen>
+
+    <!--goodactivity中的价格大小-->
+    <dimen name="price_in_activity">40sp</dimen>
+
+    <dimen name="good_card1_size">150dp</dimen>
+    <dimen name="list_pic_in_market_size">70dp</dimen>
+    <dimen name="fragment_market_size">90dp</dimen>
+</resources>

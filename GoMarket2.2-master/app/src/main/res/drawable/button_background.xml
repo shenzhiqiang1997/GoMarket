@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--作为用于搜索筛选的按钮-->
+    <item>
+        <shape>
+            <solid android:color="@color/colorBackGround">
+
+            </solid>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="5dp">
+
+            </corners>
+            <stroke android:width="0.3dp"
+                android:color="@color/colorGary">
+
+            </stroke>
+        </shape>
+    </item>
+</layer-list>
